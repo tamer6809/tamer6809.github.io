@@ -1,69 +1,572 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benim Sitem</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-            color: #222;
-            text-align: center;
-        }
+<title>Liberal Muhafazakar Komünist Parti</title>
 
-        header {
-            background: #222;
-            color: white;
-            padding: 60px 20px;
-        }
+<style>
 
-        h1 {
-            font-size: 42px;
-        }
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        section {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: #222;
+}
 
-        footer {
-            padding: 20px;
-            background: #222;
-            color: white;
-        }
-    </style>
+header {
+    background: linear-gradient(135deg, #8b0000, #111, #c9a227);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.logo {
+    font-size: 90px;
+    animation: don 3s infinite;
+}
+
+@keyframes don {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+header h1 {
+    font-size: 44px;
+    max-width: 900px;
+    margin: 15px auto;
+}
+
+.slogan {
+    max-width: 850px;
+    margin: 25px auto;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.parodi {
+    display: inline-block;
+    background: #ffd700;
+    color: #111;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+nav {
+    background: #111;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+section {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.1);
+}
+
+h2 {
+    color: #8b0000;
+    font-size: 32px;
+}
+
+.warning {
+    background: #fff3cd;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.promise {
+    background: #f5f0d5;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 7px solid #8b0000;
+    border-radius: 10px;
+}
+
+.leader {
+    text-align: center;
+}
+
+.leader-face {
+    font-size: 100px;
+}
+
+.flag {
+    max-width: 500px;
+    height: 180px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        to bottom,
+        #8b0000 0%,
+        #8b0000 33%,
+        white 33%,
+        white 66%,
+        #111 66%,
+        #111 100%
+    );
+    border-radius: 15px;
+    font-size: 60px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    background: #8b0000;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #b00000;
+}
+
+#kart {
+    display: none;
+    margin-top: 30px;
+}
+
+.membership-card {
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #8b0000, #222);
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.membership-card h3 {
+    font-size: 25px;
+}
+
+.card-logo {
+    font-size: 50px;
+}
+
+.vote {
+    text-align: center;
+}
+
+.result-box {
+    background: #f5f5f5;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+}
+
+.bar {
+    height: 25px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #8b0000;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    margin-top: 60px;
+}
+
+#mesaj {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media(max-width:600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .slogan {
+        font-size: 18px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    section {
+        margin: 20px 10px;
+        padding: 25px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Merhaba! 👋</h1>
-        <p>Benim internet siteme hoş geldin.</p>
-    </header>
+<header>
 
-    <section>
-        <h2>Hakkımda</h2>
-        <p>
-            Buraya kendin hakkında istediğin bilgileri yazabilirsin.
-        </p>
-    </section>
+<div class="logo">☭ 🗽 🏠</div>
 
-    <section>
-        <h2>İletişim</h2>
-        <p>
-            Bana ulaşmak için buraya iletişim bilgilerini ekleyebilirsin.
-        </p>
-    </section>
+<h1>
+LİBERAL MUHAFAZAKAR KOMÜNİST PARTİ
+</h1>
 
-    <footer>
-        © 2026 Benim Sitem
-    </footer>
+<div class="slogan">
+“BİZ ÇALMAYACAĞIZ DEMİYORUZ,
+BİZ DE ÇALACAĞIZ AMA İHTİYACIMIZ KADAR ÇALACAĞIZ.”
+</div>
+
+<div class="parodi">
+⚠️ TAMAMEN KURMACA & MİZAH AMAÇLIDIR
+</div>
+
+</header>
+
+
+<nav>
+
+<a href="#parti">Partimiz</a>
+<a href="#program">Program</a>
+<a href="#lider">Başkan</a>
+<a href="#katil">Katıl</a>
+<a href="#secim">Seçim</a>
+
+</nav>
+
+
+<section id="parti">
+
+<h2>🏛️ Partimiz</h2>
+
+<p>
+Liberal Muhafazakar Komünist Parti, birbirinden farklı
+siyasi fikirleri tek bir hayalî partide buluşturan
+mizahi bir siyasi parti parodisidir.
+</p>
+
+<p>
+Partimizin amacı ülkeyi yönetmek değil,
+internette biraz olsun gülümsemeye sebep olmaktır.
+</p>
+
+<div class="warning">
+
+⚠️ <strong>PARODİ UYARISI:</strong>
+
+Bu site gerçek bir siyasi parti, seçim kampanyası
+veya siyasi kuruluş değildir. Tamamen kurmaca ve
+mizah amacıyla hazırlanmıştır.
+
+</div>
+
+</section>
+
+
+<section id="program">
+
+<h2>📜 Parti Programımız</h2>
+
+<div class="promise">
+<strong>☕ Çay Bakanlığı</strong>
+<p>
+Çayın soğumasını önlemek için bütün masalara
+acil durum çay servisi kurulacaktır.
+</p>
+</div>
+
+<div class="promise">
+<strong>🧦 Kayıp Çorap Komisyonu</strong>
+<p>
+Çamaşır makinesinde kaybolan çorapların nerede
+olduğunu araştırmak üzere özel ekip kurulacaktır.
+</p>
+</div>
+
+<div class="promise">
+<strong>📺 Kumanda Özgürlüğü</strong>
+<p>
+Kumandayı elinde tutan vatandaşın kanal değiştirme
+hakkı anayasal güvence altına alınacaktır.
+</p>
+</div>
+
+<div class="promise">
+<strong>😴 Pazar Tatili</strong>
+<p>
+Pazar sabahı saat 10.00'dan önce kimse uyandırılmayacaktır.
+</p>
+</div>
+
+</section>
+
+
+<section id="lider" class="leader">
+
+<h2>👔 Genel Başkan</h2>
+
+<div class="leader-face">🧑‍💼</div>
+
+<h3>Sayın Başkan</h3>
+
+<p>
+Henüz seçilmemiştir ama şimdiden genel başkandır.
+</p>
+
+<p>
+<strong>Uzmanlık:</strong>
+Toplantıları ertelemek, çay içmek ve kumandayı bulmak.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>🚩 Parti Bayrağı</h2>
+
+<div class="flag">
+☭ 🗽 🏠
+</div>
+
+<p style="text-align:center;">
+Üç farklı fikir, tek bir bayrak.
+</p>
+
+</section>
+
+
+<section id="katil">
+
+<h2>🪪 Parti Üyeliği</h2>
+
+<p>
+Partimize katılmak için aşağıdaki tamamen
+kurgusal formu doldur.
+</p>
+
+<form onsubmit="uyeOl(event)">
+
+<input
+    id="isim"
+    type="text"
+    placeholder="Adın"
+    required
+>
+
+<input
+    id="soyisim"
+    type="text"
+    placeholder="Soyadın"
+    required
+>
+
+<button type="submit">
+🚩 PARTİYE KATIL
+</button>
+
+</form>
+
+
+<div id="kart">
+
+<div class="membership-card">
+
+<div class="card-logo">
+☭ 🗽 🏠
+</div>
+
+<h3>LİBERAL MUHAFAZAKAR KOMÜNİST PARTİ</h3>
+
+<p>🎫 ONURSAL PARODİ ÜYELİK KARTI</p>
+
+<p id="kartIsim"></p>
+
+<p>
+Üyelik No:
+<span id="uyeNo"></span>
+</p>
+
+<p>
+⭐ Statü: Çay Komisyonu Adayı
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="secim" class="vote">
+
+<h2>🗳️ 2026 Büyük Parodi Seçimi</h2>
+
+<p>
+Tamamen hayalî seçim sonuçlarımız:
+</p>
+
+
+<div class="result-box">
+
+🥪 Tost Partisi — %37
+
+<div class="bar">
+<span style="width:37%"></span>
+</div>
+
+</div>
+
+
+<div class="result-box">
+
+☭ Liberal Muhafazakar Komünist Parti — %42
+
+<div class="bar">
+<span style="width:42%"></span>
+</div>
+
+</div>
+
+
+<div class="result-box">
+
+🧦 Kayıp Çorap Hareketi — %21
+
+<div class="bar">
+<span style="width:21%"></span>
+</div>
+
+</div>
+
+
+<button onclick="sonuc()">
+📢 Seçim Sonucunu Açıkla
+</button>
+
+<div id="mesaj"></div>
+
+</section>
+
+
+<footer>
+
+<p>
+<strong>LİBERAL MUHAFAZAKAR KOMÜNİST PARTİ</strong>
+</p>
+
+<p>
+“Biraz liberal, biraz muhafazakâr,
+biraz komünist, tamamen kafadan.”
+</p>
+
+<p>
+© 2026 — Kurmaca Parodi Sitesidir
+</p>
+
+</footer>
+
+
+<script>
+
+function uyeOl(event) {
+
+    event.preventDefault();
+
+    let isim =
+        document.getElementById("isim").value;
+
+    let soyisim =
+        document.getElementById("soyisim").value;
+
+    let numara =
+        Math.floor(100000 + Math.random() * 900000);
+
+    document.getElementById("kartIsim").innerHTML =
+        "👤 Üye: <strong>" +
+        isim + " " + soyisim +
+        "</strong>";
+
+    document.getElementById("uyeNo").innerText =
+        numara;
+
+    document.getElementById("kart").style.display =
+        "block";
+
+    document.getElementById("kart")
+        .scrollIntoView({behavior:"smooth"});
+
+}
+
+
+function sonuc() {
+
+    document.getElementById("mesaj").innerHTML =
+        "🎉 SONUÇ AÇIKLANDI!<br><br>" +
+        "Partimiz %42 ile seçimi kazandı!<br>" +
+        "🏆 Ödül olarak bütün üyelerimize birer çay verilecektir. ☕😂";
+
+}
+
+</script>
 
 </body>
 </html>
+```
